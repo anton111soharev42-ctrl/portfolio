@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F-Engineering — концепт редизайна главной</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c1116;--ink2:#141b22;--steel:#1d2731;--line:rgba(255,255,255,.12);--lineD:#dfe4e8;--white:#f3f5f7;--muted:#8d98a3;--mutedD:#5b6670;--ice:#7cc7e8;--ice2:#3d9cc6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter Tight',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.mono{font-family:'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 28px;font-weight:600;font-size:15px;border:1px solid transparent;transition:.2s}
+.btn.pri{background:var(--white);color:var(--ink)}
+.btn.pri:hover{background:var(--ice)}
+.btn.out{border-color:rgba(255,255,255,.35);color:#fff}
+.btn.out:hover{border-color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.arrow{font-family:'IBM Plex Mono',monospace}
+
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:5;color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:92px;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:19px;letter-spacing:.02em}
+.logo i{width:30px;height:30px;border:1.5px solid var(--ice);display:grid;place-items:center;font-style:normal;font-size:13px;color:var(--ice)}
+.nav{display:flex;gap:34px;font-size:14px;color:rgba(255,255,255,.78)}
+.nav a:hover{color:#fff}
+.phone{text-align:right}
+.phone b{display:block;font-size:17px;font-weight:600}
+.phone small{color:rgba(255,255,255,.55);font-size:12px}
+
+/* hero */
+.hero{position:relative;min-height:860px;background:var(--ink);color:#fff;overflow:hidden;display:flex;align-items:flex-end}
+.hero .bg{position:absolute;inset:0;background:url('https://food-engineer.ru/image/catalog/gornyk/IMG_9255%C2%A0%E2%80%94%20%D0%BA%D1%80%D1%83%D0%BF%D0%BD%D1%8B%D0%B8%CC%86%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80.jpeg') center 40%/cover;filter:grayscale(.35) contrast(1.15) brightness(.55) saturate(.8)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,17,22,.35) 0%,rgba(12,17,22,.55) 45%,rgba(12,17,22,.96) 100%),linear-gradient(90deg,rgba(12,17,22,.85) 0%,rgba(12,17,22,0) 65%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:70px}
+.hero .k{color:var(--ice);margin-bottom:26px;display:flex;align-items:center;gap:14px}
+.hero .k:before{content:"";width:36px;height:1px;background:var(--ice)}
+.hero h1{font-size:74px;line-height:1.02;font-weight:600;letter-spacing:-.025em;max-width:980px}
+.hero p{max-width:640px;color:rgba(255,255,255,.72);font-size:18px;margin:28px 0 40px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;border-top:1px solid var(--line)}
+.facts div{padding:26px 26px 0 0;border-right:1px solid var(--line);margin-right:26px}
+.facts div:last-child{border:0}
+.facts b{display:block;font-size:40px;font-weight:600;letter-spacing:-.02em}
+.facts span{color:var(--muted);font-size:14px}
+
+/* sections */
+section{padding:120px 0}
+.head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:64px}
+.head .mono{color:var(--ice2);margin-bottom:18px;display:block}
+h2{font-size:52px;line-height:1.05;font-weight:600;letter-spacing:-.02em}
+.head p{color:var(--mutedD);font-size:17px;max-width:560px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--lineD);border-left:1px solid var(--lineD)}
+.svc a{border-right:1px solid var(--lineD);border-bottom:1px solid var(--lineD);padding:36px 34px 40px;min-height:250px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s;background:#fff}
+.svc a:hover{background:var(--ink);color:#fff}
+.svc a:hover .n,.svc a:hover p{color:var(--ice)}
+.svc .n{color:var(--mutedD)}
+.svc h3{font-size:24px;font-weight:600;letter-spacing:-.01em;margin:26px 0 10px;line-height:1.2}
+.svc p{color:var(--mutedD);font-size:15px}
+
+/* about */
+.about{background:var(--ink);color:#fff}
+.about .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about .ph{position:relative;aspect-ratio:4/5;background:url('https://food-engineer.ru/image/catalog/Articles/ledoviy_dvorets_082026-1024x576.jpg') center/cover;filter:grayscale(.3) contrast(1.15) brightness(.85)}
+.about .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(124,199,232,.18),rgba(12,17,22,.55))}
+.about .ph span{position:absolute;left:24px;bottom:24px;z-index:2;background:rgba(12,17,22,.82);padding:14px 18px;font-size:14px;max-width:80%}
+.about h2{margin:18px 0 28px}
+.about .lead{font-size:21px;line-height:1.5;color:#fff;margin-bottom:22px}
+.about p{color:rgba(255,255,255,.66);font-size:16px;margin-bottom:16px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:44px;border-top:1px solid var(--line)}
+.steps div{padding-top:18px;font-size:14px;color:rgba(255,255,255,.8)}
+.steps div b{display:block;color:var(--ice);font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12px;margin-bottom:6px}
+
+/* projects */
+.proj{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.card{position:relative;overflow:hidden;background:var(--steel);color:#fff;min-height:380px;display:flex;align-items:flex-end}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.3) contrast(1.15) brightness(.7);transition:.5s}
+.card:hover img{transform:scale(1.04);filter:grayscale(0) contrast(1.15) brightness(.75)}
+.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,17,22,0) 30%,rgba(12,17,22,.92) 100%)}
+.card div{position:relative;z-index:2;padding:28px}
+.card .mono{color:var(--ice)}
+.card h3{font-size:22px;font-weight:600;line-height:1.25;margin-top:10px;letter-spacing:-.01em}
+.c1{grid-column:span 7;min-height:480px}.c2{grid-column:span 5;min-height:480px}.c3,.c4,.c5{grid-column:span 4}
+.more{margin-top:40px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--lineD);padding-top:26px}
+
+/* advantages */
+.adv{background:var(--white)}
+.advg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--lineD);border:1px solid var(--lineD)}
+.advg div{background:var(--white);padding:34px 30px;min-height:210px}
+.advg b{font-family:'IBM Plex Mono',monospace;font-weight:400;color:var(--ice2);font-size:13px}
+.advg p{font-size:17px;line-height:1.45;margin-top:22px;font-weight:500}
+
+/* partners */
+.partners{padding:90px 0;border-bottom:1px solid var(--lineD)}
+.pl{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--lineD);border-left:1px solid var(--lineD)}
+.pl span{border-right:1px solid var(--lineD);border-bottom:1px solid var(--lineD);height:96px;display:grid;place-items:center;font-weight:600;font-size:18px;color:#3b454e;letter-spacing:.02em}
+
+/* cta + footer */
+.cta{background:var(--ink);color:#fff;padding:110px 0}
+.cta .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.cta h2{max-width:760px}
+.cta p{color:var(--muted);margin-top:18px;font-size:17px}
+footer{background:#080b0e;color:rgba(255,255,255,.62);padding:64px 0 40px;font-size:14px}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid var(--line)}
+.fg .mono{color:var(--ice);margin-bottom:14px;display:block}
+.fg b{color:#fff;font-weight:500;display:block;font-size:16px;margin-top:6px}
+.fl a{display:block;margin-bottom:8px}.fl a:hover{color:#fff}
+.legal{padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+.note{position:fixed;right:18px;bottom:18px;z-index:20;background:#fff;color:var(--ink);font-size:12px;padding:10px 14px;border:1px solid var(--lineD);box-shadow:0 10px 30px rgba(0,0,0,.18)}
+
+@media (max-width:1000px){
+ .wrap{padding:0 20px}.nav,.phone small{display:none}
+ .hero{min-height:760px}.hero h1{font-size:42px}.hero p{font-size:16px}
+ .facts{grid-template-columns:1fr 1fr;row-gap:20px}.facts div:nth-child(2){border:0}.facts b{font-size:30px}
+ section{padding:80px 0}.head,.about .grid{grid-template-columns:1fr;gap:28px}h2{font-size:34px}
+ .svc,.advg{grid-template-columns:1fr}.svc a{min-height:auto}
+ .about .ph{aspect-ratio:4/3}.steps{grid-template-columns:1fr 1fr;row-gap:14px}
+ .proj{grid-template-columns:1fr}.c1,.c2,.c3,.c4,.c5{grid-column:auto;min-height:320px}
+ .pl{grid-template-columns:repeat(3,1fr)}.pl span{font-size:14px;height:72px}
+ .cta .wrap{flex-direction:column;align-items:flex-start}.fg{grid-template-columns:1fr 1fr}
+ .phone b{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+ <div class="wrap">
+  <a class="logo" href="#"><i>F</i>F-ENGINEERING</a>
+  <nav class="nav"><a href="#svc">Проектирование</a><a href="#svc">Производство</a><a href="#svc">Каталог</a><a href="#proj">Выполненные объекты</a><a href="#about">О компании</a><a href="#contacts">Контакты</a></nav>
+  <div class="phone"><b>8-800-550-62-71</b><small>с 9 до 19, сб и вс — выходной</small></div>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="bg"></div>
+ <div class="wrap">
+  <div class="k mono">Проектирование холодильных систем</div>
+  <h1>Производство промышленного холодильного оборудования</h1>
+  <p>От проектирования объекта и поставки профессионального и технологического оборудования, до монтажа и дальнейшего сервисного обслуживания объекта.</p>
+  <div class="actions"><a class="btn pri" href="#contacts">Подбор оборудования <span class="arrow">→</span></a><a class="btn out" href="#proj">Выполненные объекты</a></div>
+  <div class="facts">
+   <div><b>с 2011</b><span>работаем на рынке</span></div>
+   <div><b>36</b><span>выполненных объектов в портфолио</span></div>
+   <div><b>510 кВт</b><span>холодильный комплекс, молзавод «Горняк»</span></div>
+   <div><b>17</b><span>брендов-партнёров: Bitzer, Copeland, Carel…</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="svc">
+ <div class="wrap">
+  <div class="head">
+   <div><span class="mono">Направления</span><h2>Полный комплекс услуг</h2></div>
+   <p>Консультирование, разработка технического решения, производство и гарантийное обслуживание.</p>
+  </div>
+  <div class="svc">
+   <a href="#"><span class="mono n">01</span><div><h3>Проектирование</h3><p>Холодоснабжение, вентиляция и кондиционирование, супермаркеты и гипермаркеты</p></div></a>
+   <a href="#"><span class="mono n">02</span><div><h3>Промышленный холод</h3><p>Холодильные агрегаты, теплообменное оборудование, материалы для холодильных камер и складов</p></div></a>
+   <a href="#"><span class="mono n">03</span><div><h3>Чиллеры</h3><p>Моноблочные чиллеры и чиллеры для ЦОД</p></div></a>
+   <a href="#"><span class="mono n">04</span><div><h3>Длительное хранение овощей и фруктов</h3><p>Системы вентиляции и осушения воздуха</p></div></a>
+   <a href="#"><span class="mono n">05</span><div><h3>Нестандартное оборудование</h3><p>Изготовление нестандартного оборудования из нержавеющей стали</p></div></a>
+   <a href="#"><span class="mono n">06</span><div><h3>Монтаж и обслуживание</h3><p>Системы автоматизации, запчасти и комплектующие</p></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="wrap grid">
+  <div class="ph"><span>Ледовые арены Грозного — спроектировали и реализовали</span></div>
+  <div>
+   <span class="mono" style="color:var(--ice)">О компании</span>
+   <h2>Комплексный подход — основной принцип работы</h2>
+   <p class="lead">F-Engineering – объединяет в себе внимательных профессионалов в области магазиностроения, оснащения пищевых производств, промышленного холодильного и складского оборудования.</p>
+   <p>Мы имеем все необходимое для решения задач любой сложности. Мы предлагаем оборудование и запасные части, из Европы и Америки и России.</p>
+   <div class="steps">
+    <div><b>01</b>Проектирование</div><div><b>02</b>Производство</div><div><b>03</b>Поставка</div><div><b>04</b>Монтаж</div><div><b>05</b>Сервис</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="proj">
+ <div class="wrap">
+  <div class="head">
+   <div><span class="mono">Портфолио</span><h2>Выполненные объекты</h2></div>
+   <p>Ледовые арены, пищевые производства, склады хранения продукции — от проекта до запуска.</p>
+  </div>
+  <div class="proj">
+   <a class="card c1" href="#"><img src="https://food-engineer.ru/image/catalog/Articles/ledoviy_dvorets_082026-1024x576.jpg" alt=""><div><span class="mono">Грозный · 2026</span><h3>Лед под контролем: 2 ледовые арены Грозного</h3></div></a>
+   <a class="card c2" href="#"><img src="https://food-engineer.ru/image/catalog/gornyk/IMG_9255%C2%A0%E2%80%94%20%D0%BA%D1%80%D1%83%D0%BF%D0%BD%D1%8B%D0%B8%CC%86%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80.jpeg" alt=""><div><span class="mono">ДНР · 510 кВт</span><h3>Модернизация системы охлаждения — молзавод «Горняк»</h3></div></a>
+   <a class="card c3" href="#"><img src="https://food-engineer.ru/image/cache/catalog/Sochi/%D0%A1%D0%BE%D1%87%D0%B8%20%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%20-6734-min-600x600h.jpg" alt=""><div><span class="mono">Сочи · 1 500 м²</span><h3>Склад готовой продукции</h3></div></a>
+   <a class="card c4" href="#"><img src="https://food-engineer.ru/image/cache/catalog/Articles/Agregaty/imgonline-com-ua-Resize-8U3i5z9bEmtZEOmr-600x600.jpg" alt=""><div><span class="mono">Тутаев</span><h3>Завод «Айсберри» — камера закалки мороженого</h3></div></a>
+   <a class="card c5" href="#"><img src="https://food-engineer.ru/image/catalog/makeevka/1%20(3).JPG" alt=""><div><span class="mono">Макеевка</span><h3>Складской комплекс для хранения пищевой продукции</h3></div></a>
+  </div>
+  <div class="more"><span class="mono" style="color:var(--mutedD)">36 объектов</span><a class="btn dark" href="#">Все объекты <span class="arrow">→</span></a></div>
+ </div>
+</section>
+
+<section class="adv">
+ <div class="wrap">
+  <div class="head"><div><span class="mono">Почему мы</span><h2>Наши преимущества</h2></div><p>Изготовление и сервис оборудования в утвержденные сроки.</p></div>
+  <div class="advg">
+   <div><b>01</b><p>Полный комплекс услуг — консультирование, разработка технического решения, производство и гарантийное обслуживание</p></div>
+   <div><b>02</b><p>Возможность быть в курсе текущего состояния производства заказанного оборудования</p></div>
+   <div><b>03</b><p>Широкий модельный ряд изделий</p></div>
+   <div><b>04</b><p>Изготовление и сервис оборудования в утвержденные сроки</p></div>
+   <div><b>05</b><p>Бесперебойные поставки компонентов</p></div>
+   <div><b>06</b><p>Оптимальная цена</p></div>
+   <div><b>07</b><p>Выполнение сложных нестандартных конструкторских технологических решений</p></div>
+   <div><b>08</b><p>Разработано собственное программное обеспечение отвечающее всем отраслевым стандартам</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="partners">
+ <div class="wrap">
+  <div class="head" style="margin-bottom:40px"><div><span class="mono">Партнёры</span><h2>Оборудование ведущих производителей</h2></div><p>Европа, Америка и Россия.</p></div>
+  <div class="pl"><span>Bitzer</span><span>Bock</span><span>Carel</span><span>Copeland</span><span>Refcomp</span><span>Dorin</span><span>Ebm-papst</span><span>Emerson</span><span>Güntner</span><span>LU-VE</span><span>Ziehl-Abegg</span><span>Sanhua</span></div>
+ </div>
+</section>
+
+<section class="cta" id="contacts">
+ <div class="wrap">
+  <div><span class="mono" style="color:var(--ice)">Подбор оборудования</span><h2 style="margin-top:18px">Подберём оптимальное решение для вашей сферы деятельности</h2><p>Специалисты компании дадут грамотную консультацию по всему перечню поставляемого оборудования.</p></div>
+  <a class="btn pri" href="tel:+78005506271">8-800-550-62-71 <span class="arrow">→</span></a>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="fg">
+   <div><a class="logo" href="#" style="color:#fff"><i>F</i>F-ENGINEERING</a><p style="margin-top:18px;max-width:300px">Производство промышленного холодильного оборудования</p></div>
+   <div><span class="mono">Офис</span>344090, г. Ростов-на-Дону, ул. Малиновского, д. 46а/27 литер а, помещ. 4г (офис 25)</div>
+   <div><span class="mono">Производство</span>г. Ростов-на-Дону, Юго-Восточная Промзона, 17/1</div>
+   <div><span class="mono">Контакты</span><b>8 (863) 310-11-71</b><b>8 (800) 550-62-71</b></div>
+  </div>
+  <div class="legal"><span>ООО "ПРОФЕССИОНАЛЬНОЕ ОБОРУДОВАНИЕ" ИНН 6168094112 · © 2011-2025</span><span>Каталог · Статьи · Условия оплаты · Доставка · Гарантия и сервис</span></div>
+ </div>
+</footer>
+<div class="note">Концепт редизайна главной · тексты и фото с food-engineer.ru</div>
+</body>
+</html>
