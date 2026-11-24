@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Автосервис «Гараж 42» — демо-лендинг</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101113;--panel:#17191c;--line:#2a2d31;--ink:#f3f3f1;--muted:#9a9ea4;--acc:#ff6a1a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Golos Text',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:1220px;margin:0 auto;padding:0 32px}
+header{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid var(--line)}
+.logo{font-family:Unbounded,sans-serif;font-weight:700;font-size:20px;letter-spacing:.02em}
+.logo b{color:var(--acc)}
+nav a{color:var(--muted);text-decoration:none;margin-left:30px;font-size:15px}
+.btn{display:inline-block;background:var(--acc);color:#111;font-weight:600;padding:16px 28px;border-radius:10px;text-decoration:none;border:0;font:inherit;font-weight:600;cursor:pointer}
+.btn.out{background:transparent;color:var(--ink);border:1px solid #44484e}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;padding:70px 0 80px;align-items:center}
+.tag{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);font-weight:600}
+h1{font-family:Unbounded,sans-serif;font-weight:700;font-size:62px;line-height:1.04;margin:20px 0 24px;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--acc)}
+.lead{color:var(--muted);font-size:19px;max-width:540px;margin-bottom:34px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px}
+.stats div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.stats b{font-family:Unbounded,sans-serif;font-size:24px;display:block}
+.stats small{color:var(--muted)}
+.calc{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:32px}
+.calc h3{font-family:Unbounded,sans-serif;font-size:20px;margin-bottom:6px}
+.calc p.s{color:var(--muted);font-size:14px;margin-bottom:22px}
+label{display:block;font-size:13px;color:var(--muted);margin:14px 0 6px}
+select{width:100%;padding:14px;border-radius:10px;background:#0f1012;color:var(--ink);border:1px solid var(--line);font:inherit}
+.chk{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chk label{margin:0;display:flex;gap:6px;align-items:center;background:#0f1012;border:1px solid var(--line);border-radius:30px;padding:8px 14px;color:var(--ink);font-size:14px;cursor:pointer}
+.chk input{accent-color:var(--acc)}
+.total{display:flex;justify-content:space-between;align-items:flex-end;margin:24px 0 18px;padding-top:20px;border-top:1px dashed var(--line)}
+.total b{font-family:Unbounded,sans-serif;font-size:34px;color:var(--acc)}
+section{padding:90px 0;border-top:1px solid var(--line)}
+h2{font-family:Unbounded,sans-serif;font-size:40px;font-weight:700;margin-bottom:12px}
+.sub{color:var(--muted);margin-bottom:44px;font-size:17px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc div{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px}
+.svc span{font-family:Unbounded,sans-serif;color:var(--acc);font-size:14px}
+.svc h3{font-size:21px;margin:14px 0 8px}
+.svc p{color:var(--muted);font-size:15px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.why b{display:block;font-size:18px;margin-bottom:8px}
+.why p{color:var(--muted);font-size:15px}
+.why i{display:block;width:40px;height:3px;background:var(--acc);margin-bottom:18px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+@media (max-width:900px){nav{display:none}.hero{grid-template-columns:1fr}.svc,.why{grid-template-columns:1fr}h1{font-size:40px}h2{font-size:30px}.wrap{padding:0 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header>
+  <div class="logo">ГАРАЖ<b>42</b></div>
+  <nav><a href="#svc">Услуги</a><a href="#why">Почему мы</a><a href="#calc">Расчёт</a></nav>
+  <a class="btn" href="#calc">Записаться</a>
+ </header>
+ <div class="hero">
+  <div>
+   <div class="tag">Автосервис полного цикла</div>
+   <h1>Ремонт авто <em>в&nbsp;срок</em> и&nbsp;по&nbsp;цене из&nbsp;расчёта</h1>
+   <p class="lead">Посчитайте стоимость обслуживания онлайн — и запишитесь в удобное время. Запчасти в наличии на складе, гарантия на работы 12 месяцев.</p>
+   <a class="btn" href="#calc">Рассчитать стоимость</a>&nbsp;&nbsp;<a class="btn out" href="#svc">Все услуги</a>
+   <div class="stats">
+    <div><b>8 постов</b><small>без очереди</small></div>
+    <div><b>1 день</b><small>на большинство работ</small></div>
+    <div><b>12 мес.</b><small>гарантия</small></div>
+   </div>
+  </div>
+  <form class="calc" id="calc" onsubmit="event.preventDefault();this.querySelector('button').textContent='Заявка отправлена ✓'">
+   <h3>Калькулятор ТО</h3>
+   <p class="s">Ориентировочная стоимость работ и материалов</p>
+   <label>Класс автомобиля</label>
+   <select id="cls"><option value="1">Легковой (B/C)</option><option value="1.25">Бизнес (D/E)</option><option value="1.45">Кроссовер / внедорожник</option></select>
+   <label>Работы</label>
+   <div class="chk">
+    <label><input type="checkbox" value="2400" checked>Замена масла</label>
+    <label><input type="checkbox" value="1800">Колодки</label>
+    <label><input type="checkbox" value="3200">Диагностика</label>
+    <label><input type="checkbox" value="2800">Развал-схождение</label>
+    <label><input type="checkbox" value="1600">Шиномонтаж</label>
+   </div>
+   <div class="total"><span>Итого от</span><b id="sum">2 400 ₽</b></div>
+   <button class="btn" style="width:100%">Записаться с этой ценой</button>
+  </form>
+ </div>
+</div>
+
+<section id="svc">
+ <div class="wrap">
+  <h2>Услуги</h2>
+  <p class="sub">От планового ТО до капитального ремонта двигателя.</p>
+  <div class="svc">
+   <div><span>01</span><h3>Техобслуживание</h3><p>По регламенту производителя, с сохранением гарантии дилера.</p></div>
+   <div><span>02</span><h3>Ходовая часть</h3><p>Диагностика на стенде, замена амортизаторов и рычагов.</p></div>
+   <div><span>03</span><h3>Двигатель</h3><p>Компьютерная диагностика, ремонт ГРМ и навесного.</p></div>
+   <div><span>04</span><h3>Тормозная система</h3><p>Колодки, диски, прокачка — за один визит.</p></div>
+   <div><span>05</span><h3>Шиномонтаж</h3><p>Сезонная смена, балансировка, хранение колёс.</p></div>
+   <div><span>06</span><h3>Электрика</h3><p>Поиск неисправностей, установка сигнализаций.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="why">
+ <div class="wrap">
+  <h2>Почему «Гараж 42»</h2>
+  <p class="sub">Сервис, к которому не страшно приехать.</p>
+  <div class="why">
+   <div><i></i><b>Цена до начала работ</b><p>Согласовываем смету — и не превышаем её.</p></div>
+   <div><i></i><b>Видео-отчёт</b><p>Присылаем фото и видео с подъёмника.</p></div>
+   <div><i></i><b>Свой склад</b><p>3 000+ позиций запчастей в наличии.</p></div>
+   <div><i></i><b>Зона ожидания</b><p>Кофе, Wi-Fi и окно в рабочую зону.</p></div>
+  </div>
+ </div>
+</section>
+<footer><div class="wrap"><span>© Автосервис «Гараж 42»</span><span>Демо-проект для портфолио. Компания вымышленная.</span></div></footer>
+<script>
+const cls=document.getElementById('cls'),sum=document.getElementById('sum');
+function calc(){let s=0;document.querySelectorAll('.chk input:checked').forEach(i=>s+= +i.value);s=Math.round(s*cls.value/100)*100;sum.textContent=s.toLocaleString('ru-RU')+' ₽'}
+document.querySelectorAll('.chk input,#cls').forEach(e=>e.addEventListener('change',calc));calc();
+</script>
+</body>
+</html>

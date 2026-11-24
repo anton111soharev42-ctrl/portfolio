@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Портфолио — сайты и приложения</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0e10;--ink:#f2efe8;--muted:#8e8e93;--gold:#c8a97e;--line:#26262a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+header{padding:90px 0 60px}
+.k{display:flex;align-items:center;gap:16px;color:var(--muted);font-size:13px;letter-spacing:.24em;text-transform:uppercase}
+.k:before{content:"";width:48px;height:2px;background:var(--gold)}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:76px;line-height:1.02;margin:22px 0 18px}
+h1 em{color:var(--gold)}
+p.l{color:var(--muted);font-size:18px;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;padding-bottom:100px}
+a.card{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:border-color .2s,transform .2s}
+a.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--line)}
+.card div{padding:22px 24px}
+.card small{color:var(--gold);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.card h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;margin:4px 0}
+.card p{color:var(--muted);font-size:15px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px}
+@media (max-width:800px){.grid{grid-template-columns:1fr}h1{font-size:48px}.wrap{padding:0 18px}header{padding:56px 0 36px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header>
+  <div class="k">Web &amp; Mobile Development</div>
+  <h1>Сайты и приложения <em>для вашего бизнеса</em></h1>
+  <p class="l">Подборка работ: реальные проекты и демо-лендинги. Все сайты адаптивные — откройте их с телефона.</p>
+ </header>
+ <div class="grid">
+  <a class="card" href="https://sibneftetrans.ru/"><img src="shots/sib.jpg" alt=""><div><small>Реальный проект</small><h2>Сеть АЗС «Сибнефтетранс»</h2><p>Сайт сети АЗС: цены на топливо, карта заправок, онлайн-запись на СТО, админ-панель.</p></div></a>
+  <a class="card" href="https://anton111soharev42-ctrl.github.io/odds-lab/"><img src="shots/oddslab.jpg" alt=""><div><small>Приложение · Android + iPhone</small><h2>OddsLab</h2><p>Калькулятор вероятностей для покера и блэкджека: точный перебор, Монте-Карло, счёт карт.</p></div></a>
+  <a class="card" href="autoservice/"><img src="shots/autoservice.jpg" alt=""><div><small>Демо · Лендинг + калькулятор</small><h2>Автосервис «Гараж 42»</h2><p>Онлайн-калькулятор стоимости ТО и запись с фиксированной ценой.</p></div></a>
+  <a class="card" href="renovation/"><img src="shots/renovation.jpg" alt=""><div><small>Демо · Лендинг + калькулятор</small><h2>Ремонт квартир «Квадрат»</h2><p>Расчёт стоимости ремонта по площади и типу работ.</p></div></a>
+  <a class="card" href="dental/"><img src="shots/dental.jpg" alt=""><div><small>Демо · Лендинг</small><h2>Стоматология «Белая линия»</h2><p>Услуги, честный прайс и запись на приём за минуту.</p></div></a>
+  <a class="card" href="coffee/"><img src="shots/coffee.jpg" alt=""><div><small>Демо · Лендинг</small><h2>Кофейня «Зерно»</h2><p>Меню с ценами, часы работы и бронирование стола.</p></div></a>
+ </div>
+</div>
+<footer><div class="wrap">Демо-проекты сделаны для портфолио, компании в них вымышленные.</div></footer>
+</body>
+</html>

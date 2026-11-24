@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кофейня «Зерно» — демо-лендинг</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f0e7;--ink:#2b1d14;--muted:#7a6656;--accent:#b5652b;--card:#fffaf3;--line:#e5d9c8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+header{display:flex;align-items:center;justify-content:space-between;padding:26px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;letter-spacing:.02em}
+.logo span{color:var(--accent)}
+nav a{margin-left:34px;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:15px 30px;border-radius:40px;background:var(--ink);color:#fff;font-weight:700;font-size:15px;border:0;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:50px 0 90px}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:88px;line-height:.98;margin:18px 0 26px}
+h1 em{color:var(--accent)}
+.lead{font-size:19px;color:var(--muted);max-width:480px;margin-bottom:36px}
+.hero-art{position:relative;aspect-ratio:1/1.05;border-radius:240px 240px 24px 24px;background:radial-gradient(circle at 50% 38%,#e9b98a 0,#c4773d 34%,#5c321b 70%,#2b1d14 100%);overflow:hidden}
+.cup{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);width:58%}
+.badge{position:absolute;right:24px;bottom:40px;background:var(--card);border-radius:18px;padding:18px 22px;box-shadow:0 18px 40px rgba(43,29,20,.18)}
+.badge b{font-family:'Cormorant Garamond',serif;font-size:34px;display:block;line-height:1}
+.badge small{color:var(--muted);font-size:13px}
+.facts{display:flex;gap:48px;margin-top:44px}
+.facts b{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;display:block;line-height:1}
+.facts small{color:var(--muted);font-size:14px}
+section{padding:90px 0}
+h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:56px;line-height:1.05;margin-bottom:14px}
+.sub{color:var(--muted);margin-bottom:48px;font-size:17px}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 60px}
+.item{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+.item h3{font-size:18px;font-weight:700}
+.item p{color:var(--muted);font-size:14px}
+.item .dots{flex:1;border-bottom:1px dotted var(--muted);transform:translateY(-5px)}
+.item .price{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600}
+.dark{background:var(--ink);color:#f6f0e7}
+.dark .sub{color:#bfa995}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#3a291d;border-radius:22px;padding:34px}
+.card .n{font-family:'Cormorant Garamond',serif;font-size:48px;color:#e3a46e;line-height:1}
+.card h3{margin:16px 0 8px;font-size:20px}
+.card p{color:#bfa995;font-size:15px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hours div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+form{background:var(--card);border-radius:24px;padding:38px;box-shadow:0 20px 50px rgba(43,29,20,.08)}
+form h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;margin-bottom:20px}
+input,select{width:100%;padding:15px 18px;border:1px solid var(--line);border-radius:12px;font:inherit;margin-bottom:14px;background:#fff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ok{display:none;color:var(--accent);font-weight:700;margin-top:12px}
+footer{padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media (max-width:900px){
+ nav{display:none}.hero,.visit{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.menu{grid-template-columns:1fr}
+ h1{font-size:58px}h2{font-size:42px}.wrap{padding:0 18px}.badge{right:10px}.facts{gap:28px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header>
+  <div class="logo">Зерно<span>.</span></div>
+  <nav><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#visit">Как найти</a></nav>
+  <a class="btn" href="#visit">Забронировать стол</a>
+ </header>
+ <div class="hero">
+  <div>
+   <div class="eyebrow">Кофейня и обжарка</div>
+   <h1>Кофе, ради&nbsp;которого <em>просыпаются</em></h1>
+   <p class="lead">Обжариваем зерно сами раз в неделю и варим его так, как любит каждый гость. Свежая выпечка с семи утра.</p>
+   <a class="btn" href="#menu">Смотреть меню</a>&nbsp;&nbsp;<a class="btn ghost" href="#visit">Как найти</a>
+   <div class="facts">
+    <div><b>12</b><small>сортов зерна</small></div>
+    <div><b>7:00</b><small>открываемся</small></div>
+    <div><b>4,9</b><small>рейтинг на картах</small></div>
+   </div>
+  </div>
+  <div class="hero-art">
+   <svg class="cup" viewBox="0 0 200 170" fill="none">
+    <path d="M70 18c-8 10 8 16 0 26M100 10c-8 12 8 18 0 30M130 18c-8 10 8 16 0 26" stroke="#fbe6cf" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    <path d="M30 60h130v18c0 40-29 72-65 72S30 118 30 78V60z" fill="#fbf3e8"/>
+    <path d="M160 72h8a22 22 0 0 1 0 44h-12" stroke="#fbf3e8" stroke-width="10"/>
+    <ellipse cx="95" cy="60" rx="65" ry="10" fill="#7a431f"/>
+    <ellipse cx="100" cy="158" rx="90" ry="9" fill="#2b1d14" opacity=".35"/>
+   </svg>
+   <div class="badge"><b>−20%</b><small>на второй кофе до 10:00</small></div>
+  </div>
+ </div>
+</div>
+
+<section id="menu">
+ <div class="wrap">
+  <h2>Меню</h2>
+  <p class="sub">Классика и авторские напитки. Альтернативное молоко — бесплатно.</p>
+  <div class="menu">
+   <div class="item"><div><h3>Эспрессо</h3><p>Бразилия, шоколад и орех</p></div><span class="dots"></span><span class="price">150 ₽</span></div>
+   <div class="item"><div><h3>Флэт уайт</h3><p>Двойной эспрессо, бархатное молоко</p></div><span class="dots"></span><span class="price">240 ₽</span></div>
+   <div class="item"><div><h3>Капучино</h3><p>250 / 350 мл</p></div><span class="dots"></span><span class="price">210 ₽</span></div>
+   <div class="item"><div><h3>Раф «Соленая карамель»</h3><p>Сливки, домашняя карамель</p></div><span class="dots"></span><span class="price">290 ₽</span></div>
+   <div class="item"><div><h3>Воронка V60</h3><p>Эфиопия, ягоды и жасмин</p></div><span class="dots"></span><span class="price">260 ₽</span></div>
+   <div class="item"><div><h3>Круассан</h3><p>Сливочное масло 82%</p></div><span class="dots"></span><span class="price">160 ₽</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark" id="about">
+ <div class="wrap">
+  <h2>Почему к нам возвращаются</h2>
+  <p class="sub">Три вещи, которые мы не меняем с первого дня.</p>
+  <div class="cards">
+   <div class="card"><div class="n">01</div><h3>Своя обжарка</h3><p>Зерно никогда не лежит дольше трёх недель — вкус всегда яркий.</p></div>
+   <div class="card"><div class="n">02</div><h3>Бариста-чемпионы</h3><p>Команда регулярно участвует в региональных чемпионатах.</p></div>
+   <div class="card"><div class="n">03</div><h3>Выпечка утром</h3><p>Круассаны и булочки пекутся прямо здесь, каждое утро.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="visit">
+ <div class="wrap visit">
+  <div>
+   <h2>Ждём в гости</h2>
+   <p class="sub">ул. Примерная, 12 — пять минут от центра.</p>
+   <div class="hours">
+    <div><span>Пн — Пт</span><b>7:00 — 22:00</b></div>
+    <div><span>Сб — Вс</span><b>9:00 — 23:00</b></div>
+    <div><span>Телефон</span><b>+7 (900) 000-00-00</b></div>
+   </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block'">
+   <h3>Забронировать стол</h3>
+   <input placeholder="Ваше имя" required>
+   <input placeholder="Телефон" required>
+   <div class="row"><input type="date" required><select><option>2 гостя</option><option>4 гостя</option><option>6 гостей</option></select></div>
+   <button class="btn" style="width:100%">Отправить заявку</button>
+   <p class="ok">Спасибо! Мы перезвоним в течение 10 минут.</p>
+  </form>
+ </div>
+</section>
+<footer><div class="wrap"><span>© Кофейня «Зерно»</span><span>Демо-проект для портфолио. Компания вымышленная.</span></div></footer>
+</body>
+</html>
