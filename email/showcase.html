@@ -28,7 +28,7 @@ li:before{content:"";position:absolute;left:0;top:11px;width:16px;height:2px;bac
 <div class="mob"><iframe id="f2"></iframe></div>
 <script>
 const q=new URLSearchParams(location.search), f=q.get('f')||'coffee';
-const meta={coffee:['Промо-письмо <em>для кофейни</em>','Акция, новинки меню и кнопка маршрута.'],autoservice:['Напоминание <em>о ТО</em>','Персональное письмо с ценами и записью.'],dental:['Подтверждение <em>записи</em>','Транзакционное письмо клиники.']}[f];
+const meta={coffee:['Промо-письмо <em>для кофейни</em>','Акция, новинки меню и кнопка маршрута.'],autoservice:['Напоминание <em>о ТО</em>','Персональное письмо с ценами и записью.'],dental:['Подтверждение <em>записи</em>','Транзакционное письмо клиники.'],shop:['Распродажа <em>для магазина</em>','Акционное письмо с товарами и промокодом.'],renovation:['Приветственное <em>письмо</em>','Welcome-письмо после заявки на сайте.']}[f];
 document.getElementById('t').innerHTML=meta[0];document.getElementById('d').textContent=meta[1];
 document.getElementById('f1').src=f+'.html';document.getElementById('f2').src=f+'.html';
 </script></body></html>
