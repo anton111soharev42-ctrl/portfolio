@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Вера Ольховская — психолог · концепт</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f3ede3;--paper2:#ebe3d5;--ink:#22201c;--soft:#6d665b;--line:#d2c8b8;--moss:#3f4a3a;--clay:#b5684a;--sand:#d9c6a5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.65;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;padding:30px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:.5px}
+.logo i{color:var(--clay)}
+nav ul{display:flex;gap:34px;list-style:none;font-size:14px;letter-spacing:.4px}
+nav ul a{text-decoration:none;color:var(--soft)}
+nav ul a:hover{color:var(--ink)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:end;padding:70px 0 110px;position:relative}
+.kicker{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--clay);display:flex;align-items:center;gap:14px}
+.kicker:before{content:"";width:40px;height:1px;background:var(--clay)}
+h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:112px;line-height:.92;letter-spacing:-2px;margin:28px 0 34px}
+h1 em{font-style:italic;color:var(--moss)}
+.lead{font-size:19px;color:var(--soft);max-width:470px}
+.btns{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap}
+.btn{display:inline-block;padding:17px 30px;border-radius:40px;text-decoration:none;font-size:15px;font-weight:500;transition:.25s}
+.btn.dark{background:var(--ink);color:var(--paper)}
+.btn.dark:hover{background:var(--moss)}
+.btn.line{border:1px solid var(--ink)}
+.btn.line:hover{background:var(--ink);color:var(--paper)}
+.portrait{position:relative;justify-self:end;width:100%;max-width:400px}
+.arch{aspect-ratio:3/4.2;border-radius:220px 220px 6px 6px;background:radial-gradient(120% 80% at 30% 20%,#e6d3b4 0%,#c9a77f 45%,#8a6a4f 100%);position:relative;overflow:hidden}
+.arch:after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 560'%3E%3Cg fill='none' stroke='%23f3ede3' stroke-opacity='.55' stroke-width='1.3'%3E%3Cpath d='M200 120c40 0 66 32 66 74s-28 82-66 82-66-40-66-82 26-74 66-74z'/%3E%3Cpath d='M70 560c10-120 60-200 130-206s124 80 134 206'/%3E%3C/g%3E%3C/svg%3E") center/cover}
+.arch span{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-size:12px;letter-spacing:2px;color:#f3ede3;text-transform:uppercase;opacity:.8;z-index:2}
+.stamp{position:absolute;left:-60px;bottom:60px;width:130px;height:130px;border-radius:50%;background:var(--paper);display:grid;place-items:center;box-shadow:0 0 0 1px var(--line)}
+.stamp svg{width:116px;height:116px;animation:spin 28s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stamp b{position:absolute;font-family:'Cormorant Garamond',serif;font-size:34px;font-style:italic;font-weight:400;color:var(--clay)}
+/* quote band */
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:70px 0}
+.band p{font-family:'Cormorant Garamond',serif;font-size:46px;line-height:1.2;max-width:960px;font-style:italic}
+.band p b{font-weight:400;font-style:normal;color:var(--clay)}
+/* sections */
+section{padding:120px 0}
+.sh{display:grid;grid-template-columns:260px 1fr;gap:60px;margin-bottom:60px}
+.num{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--clay);padding-top:16px}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:64px;line-height:1;letter-spacing:-1px}
+h2 em{color:var(--moss)}
+.about{display:grid;grid-template-columns:260px 1fr 1fr;gap:60px}
+.about p{color:var(--soft)}
+.about p:first-of-type:first-letter{font-family:'Cormorant Garamond',serif;font-size:76px;float:left;line-height:.8;margin:8px 10px 0 0;color:var(--ink)}
+.facts{grid-column:2/4;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:20px}
+.facts div{padding:26px 20px 0 0}
+.facts b{display:block;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:44px;line-height:1}
+.facts small{color:var(--soft);font-size:14px}
+/* approach */
+.approach{background:var(--moss);color:#efe9dd}
+.approach h2 em{color:var(--sand)}
+.approach .num{color:var(--sand)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(239,233,221,.18);border:1px solid rgba(239,233,221,.18)}
+.card{background:var(--moss);padding:44px 36px 50px;transition:.3s}
+.card:hover{background:#465241}
+.card svg{width:54px;height:54px;margin-bottom:34px}
+.card h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:32px;margin-bottom:12px}
+.card p{color:rgba(239,233,221,.72);font-size:16px}
+/* path */
+.path{display:grid;grid-template-columns:260px 1fr;gap:60px}
+.tl{list-style:none}
+.tl li{display:grid;grid-template-columns:140px 1fr;gap:30px;padding:28px 0;border-top:1px solid var(--line)}
+.tl li:last-child{border-bottom:1px solid var(--line)}
+.tl time{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--clay)}
+.tl h4{font-weight:600;font-size:17px;margin-bottom:4px}
+.tl p{color:var(--soft);font-size:15px}
+/* prices */
+.prices{background:var(--paper2)}
+.plist{border-top:1px solid var(--ink)}
+.prow{display:grid;grid-template-columns:1fr 160px 180px;align-items:center;gap:30px;padding:34px 0;border-bottom:1px solid var(--line);transition:.25s}
+.prow:hover{padding-left:16px}
+.prow h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.05}
+.prow p{color:var(--soft);font-size:15px;margin-top:6px}
+.prow .t{color:var(--soft);font-size:15px}
+.prow .p{font-family:'Cormorant Garamond',serif;font-size:38px;text-align:right}
+.note{margin-top:26px;font-size:14px;color:var(--soft)}
+/* books */
+.books{display:grid;grid-template-columns:260px 1fr 1fr;gap:60px;align-items:center}
+.shelf{display:flex;gap:22px;align-items:flex-end;height:280px}
+.bk{width:120px;border-radius:3px 8px 8px 3px;box-shadow:inset 6px 0 0 rgba(0,0,0,.12),0 18px 30px rgba(60,40,20,.15);display:flex;align-items:flex-end;padding:16px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;line-height:1.1;color:#f3ede3}
+.bk:nth-child(1){height:250px;background:var(--clay)}
+.bk:nth-child(2){height:210px;background:var(--moss)}
+.bk:nth-child(3){height:270px;background:var(--ink);opacity:.15;color:var(--ink);box-shadow:none;border:1px dashed var(--ink);background:transparent}
+.books p{color:var(--soft)}
+/* contact */
+.contact{background:var(--ink);color:var(--paper);text-align:center;padding:140px 0 60px}
+.contact h2{font-size:92px;max-width:900px;margin:0 auto 30px}
+.contact h2 em{color:var(--sand)}
+.contact p{color:#a9a196;max-width:520px;margin:0 auto 44px}
+.contact .btn.dark{background:var(--paper);color:var(--ink)}
+.contact .btn.dark:hover{background:var(--sand)}
+.contact .btn.line{border-color:#6b645a;color:var(--paper)}
+.contact .btns{justify-content:center}
+footer{display:flex;justify-content:space-between;margin-top:120px;padding-top:26px;border-top:1px solid #3a3731;font-size:13px;color:#7c756b;text-align:left}
+.reveal{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.reveal.on{opacity:1;transform:none}
+@media(max-width:900px){
+ .wrap{padding:0 20px}
+ nav ul{display:none}
+ .hero{grid-template-columns:1fr;padding:30px 0 70px;gap:50px}
+ h1{font-size:64px;letter-spacing:-1px}
+ .portrait{justify-self:center;max-width:300px}
+ .stamp{left:-30px;width:100px;height:100px}.stamp svg{width:90px;height:90px}.stamp b{font-size:26px}
+ .band{padding:50px 0}.band p{font-size:30px}
+ section{padding:80px 0}
+ .sh,.about,.path,.books{grid-template-columns:1fr;gap:24px}
+ h2{font-size:46px}
+ .facts{grid-column:auto;grid-template-columns:1fr 1fr}
+ .cards{grid-template-columns:1fr}
+ .tl li{grid-template-columns:1fr;gap:6px}
+ .prow{grid-template-columns:1fr auto;gap:8px 20px}
+ .prow .t{grid-row:2}
+ .prow .p{grid-row:1/3;grid-column:2}
+ .shelf{height:220px}.bk{width:90px}
+ .contact{padding:90px 0 40px}.contact h2{font-size:52px}
+ footer{flex-direction:column;gap:8px;margin-top:80px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <nav>
+  <div class="logo">Вера <i>Ольховская</i></div>
+  <ul><li><a href="#about">Обо мне</a></li><li><a href="#approach">Подход</a></li><li><a href="#prices">Стоимость</a></li><li><a href="#books">Книги</a></li><li><a href="#contact">Запись</a></li></ul>
+ </nav>
+ <header class="hero">
+  <div>
+   <div class="kicker">Психолог · онлайн и очно</div>
+   <h1>Место, где можно <em>не&nbsp;спешить</em></h1>
+   <p class="lead">Помогаю взрослым разобраться с тревогой, выгоранием и отношениями — бережно, без оценок и готовых рецептов.</p>
+   <div class="btns"><a class="btn dark" href="#contact">Записаться на встречу</a><a class="btn line" href="#approach">Как я работаю</a></div>
+  </div>
+  <div class="portrait">
+   <div class="arch"><span>здесь ваше фото</span></div>
+   <div class="stamp">
+    <svg viewBox="0 0 120 120"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text font-family="Manrope" font-size="10.5" letter-spacing="3.2" fill="#6d665b"><textPath href="#c">ПЕРВАЯ ВСТРЕЧА · ЗНАКОМСТВО · ПЕРВАЯ ВСТРЕЧА · </textPath></text></svg>
+    <b>20′</b>
+   </div>
+  </div>
+ </header>
+</div>
+
+<div class="band"><div class="wrap"><p class="reveal">«Терапия — это не про то, чтобы <b>починить</b> себя. Это про то, чтобы наконец себя <b>услышать</b>».</p></div></div>
+
+<section id="about"><div class="wrap">
+ <div class="sh"><div class="num">01 — обо мне</div><h2 class="reveal">Немного <em>обо мне</em></h2></div>
+ <div class="about">
+  <div></div>
+  <p class="reveal">Я клинический психолог и работаю в интегративном подходе. В моём кабинете можно говорить о чём угодно: о том, что болит, что пугает и что пока даже не получается назвать словами.</p>
+  <p class="reveal">Мне важно, чтобы терапия была не про «правильные ответы», а про ваш собственный темп. Здесь нет домашних заданий ради галочки и нет оценок — только внимательный разговор двух взрослых людей.</p>
+  <div class="facts reveal"><div><b>8 лет</b><small>частной практики</small></div><div><b>1 200+</b><small>часов консультаций</small></div><div><b>150 ч</b><small>личной терапии и супервизий</small></div></div>
+ </div>
+</div></section>
+
+<section id="approach" class="approach"><div class="wrap">
+ <div class="sh"><div class="num">02 — подход</div><h2 class="reveal">Как проходит <em>работа</em></h2></div>
+ <div class="cards">
+  <div class="card reveal"><svg viewBox="0 0 54 54" fill="none" stroke="#d9c6a5" stroke-width="1.3"><circle cx="27" cy="27" r="25"/><circle cx="27" cy="27" r="13"/><circle cx="27" cy="27" r="2" fill="#d9c6a5"/></svg><h3>Безопасность</h3><p>Конфиденциальность и уважение к вашим границам — основа, на которой строится всё остальное.</p></div>
+  <div class="card reveal"><svg viewBox="0 0 54 54" fill="none" stroke="#d9c6a5" stroke-width="1.3"><path d="M3 40c8-18 16-18 24 0s16 18 24 0"/><path d="M3 22c8-18 16-18 24 0s16 18 24 0"/></svg><h3>Свой темп</h3><p>Не тороплю и не подталкиваю. Мы двигаемся с той скоростью, которая подходит именно вам.</p></div>
+  <div class="card reveal"><svg viewBox="0 0 54 54" fill="none" stroke="#d9c6a5" stroke-width="1.3"><path d="M27 52V20"/><path d="M27 30c-10 0-16-8-16-18 10 0 16 8 16 18zM27 24c8 0 14-6 14-16-8 0-14 6-14 16z"/></svg><h3>Опора на себя</h3><p>Цель — не зависимость от психолога, а умение понимать себя и справляться самостоятельно.</p></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="path">
+  <div><div class="num">03 — опыт</div><h2 class="reveal" style="margin-top:20px">Путь <em>и образование</em></h2></div>
+  <ul class="tl">
+   <li class="reveal"><time>2012</time><div><h4>Факультет психологии</h4><p>Специалитет, клиническая психология</p></div></li>
+   <li class="reveal"><time>2016</time><div><h4>Психологический центр</h4><p>Индивидуальные и групповые консультации взрослых</p></div></li>
+   <li class="reveal"><time>2018</time><div><h4>Частная практика</h4><p>Тревога, выгорание, кризисы, отношения</p></div></li>
+   <li class="reveal"><time>2023</time><div><h4>Повышение квалификации</h4><p>Работа с травмой и эмоциональной регуляцией</p></div></li>
+  </ul>
+ </div>
+</div></section>
+
+<section id="prices" class="prices"><div class="wrap">
+ <div class="sh"><div class="num">04 — стоимость</div><h2 class="reveal">Форматы <em>и цены</em></h2></div>
+ <div class="plist">
+  <div class="prow reveal"><div><h3>Знакомство</h3><p>Познакомимся и поймём, подходим ли мы друг другу</p></div><div class="t">20 минут</div><div class="p">бесплатно</div></div>
+  <div class="prow reveal"><div><h3>Индивидуальная консультация</h3><p>Онлайн или в кабинете</p></div><div class="t">50 минут</div><div class="p">4 000 ₽</div></div>
+  <div class="prow reveal"><div><h3>Пакет из 5 встреч</h3><p>Для регулярной работы над запросом</p></div><div class="t">5 × 50 минут</div><div class="p">18 000 ₽</div></div>
+ </div>
+ <p class="note">Отменить или перенести встречу можно не позднее чем за 24 часа.</p>
+</div></section>
+
+<section id="books"><div class="wrap">
+ <div class="books">
+  <div><div class="num">05 — книги</div><h2 class="reveal" style="margin-top:20px">Книги <em>скоро</em></h2></div>
+  <div class="shelf reveal"><div class="bk">О тревоге без паники</div><div class="bk">Тихие границы</div><div class="bk">новая</div></div>
+  <p class="reveal">Здесь появятся мои книги и статьи: о тревоге, границах и бережном отношении к себе. Раздел легко дополнять — достаточно добавить обложку и описание.</p>
+ </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+ <h2 class="reveal">Первый шаг <em>можно сделать</em> сегодня</h2>
+ <p>Напишите, и мы договоримся о бесплатной 20-минутной встрече-знакомстве.</p>
+ <div class="btns"><a class="btn dark" href="#">Написать в Telegram</a><a class="btn line" href="#">Оставить заявку</a></div>
+ <footer><span>© Вера Ольховская, психолог</span><span>Концепт для портфолио: имя, факты и цены — заглушки</span></footer>
+</div></section>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
