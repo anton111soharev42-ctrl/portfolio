@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Искра — приложение знакомств · портфолио</title>
+<link rel="icon" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0e10;--ink:#f2efe8;--muted:#8e8e93;--gold:#c8a97e;--line:#26262a;--red:#e8505b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+.back{display:inline-block;margin-top:32px;color:var(--muted);text-decoration:none;font-size:14px}
+.back:hover{color:var(--gold)}
+header{padding:40px 0 20px;display:grid;grid-template-columns:96px 1fr;gap:28px;align-items:start}
+header img{width:96px;height:96px;border-radius:24px;box-shadow:0 12px 30px rgba(232,80,91,.3)}
+.k{display:flex;align-items:center;gap:16px;color:var(--muted);font-size:13px;letter-spacing:.24em;text-transform:uppercase}
+.k:before{content:"";width:48px;height:2px;background:var(--gold)}
+.badge{display:inline-block;margin-left:10px;padding:3px 10px;border:1px solid var(--red);color:var(--red);border-radius:999px;font-size:11px;letter-spacing:.12em}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:64px;line-height:1.05;margin:14px 0 14px}
+h1 em{color:var(--gold)}
+p.l{color:var(--muted);font-size:18px;max-width:720px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.stack span{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;color:#cfcac2}
+ul.f{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;margin:34px 0 10px;max-width:900px}
+ul.f li{display:flex;gap:12px;color:#d6d2ca;font-size:16px}
+ul.f li:before{content:"";flex:none;width:14px;height:2px;background:var(--gold);margin-top:12px}
+.screens{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin:40px 0 20px}
+figure{margin:0}
+figure img{display:block;width:100%;border-radius:26px;border:5px solid #222226;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+figcaption{color:var(--muted);font-size:14px;text-align:center;margin-top:12px}
+.note{color:var(--muted);font-size:13px;margin-top:20px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px;margin-top:60px}
+@media (max-width:900px){.screens{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){h1{font-size:42px}.wrap{padding:0 18px}header{grid-template-columns:1fr}ul.f{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <a class="back" href="../">← Все работы</a>
+ <header>
+  <img src="icon.png" alt="Иконка приложения Искра">
+  <div>
+   <div class="k">Мобильное приложение <span class="badge">В РАЗРАБОТКЕ</span></div>
+   <h1>Искра — <em>приложение знакомств</em></h1>
+   <p class="l">Знакомства рядом по интересам и совместимости. Одна кодовая база для Android (RuStore) и iOS (App Store), собственный сервер в России.</p>
+   <div class="stack"><span>React Native</span><span>Expo</span><span>TypeScript</span><span>Supabase / PostgreSQL</span><span>Realtime</span><span>EAS Build</span></div>
+  </div>
+ </header>
+
+ <ul class="f">
+  <li>Вход по коду на почту, подтверждение 18+ и согласие на обработку ПДн</li>
+  <li>Анкета в 8 шагов: фото, интересы, примерная геолокация (±1 км)</li>
+  <li>Лента анкет с процентом совместимости и фильтрами</li>
+  <li>Лайки, суперлайки, мэтчи и чат в реальном времени</li>
+  <li>Голосовые сообщения и фото «на один просмотр»</li>
+  <li>Верификация по селфи с жестом и значок «проверено»</li>
+  <li>Жалобы, блокировки, удаление аккаунта</li>
+  <li>Админка: онлайн в реальном времени, статистика, модерация</li>
+ </ul>
+
+ <div class="screens">
+  <figure><img src="signin.jpg" alt="Экран входа" loading="lazy"><figcaption>Вход по коду</figcaption></figure>
+  <figure><img src="feed.jpg" alt="Лента анкет" loading="lazy"><figcaption>Лента и совместимость</figcaption></figure>
+  <figure><img src="filters.jpg" alt="Настройки поиска" loading="lazy"><figcaption>Фильтры поиска</figcaption></figure>
+  <figure><img src="chat.jpg" alt="Чат" loading="lazy"><figcaption>Чат с голосовыми</figcaption></figure>
+  <figure><img src="admin.jpg" alt="Админка" loading="lazy"><figcaption>Админка и модерация</figcaption></figure>
+ </div>
+ <p class="note">Скриншоты сделаны в демо-режиме на тестовых данных; фото в анкетах скрыты.</p>
+</div>
+<footer><div class="wrap">Портфолио · сайты и приложения под ключ</div></footer>
+</body>
+</html>
