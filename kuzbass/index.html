@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>КузбассСтройМонтаж — сайт компании · портфолио</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0e10;--ink:#f2efe8;--muted:#8e8e93;--gold:#c8a97e;--line:#26262a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+.back{display:inline-block;margin-top:32px;color:var(--muted);text-decoration:none;font-size:14px}
+.back:hover{color:var(--gold)}
+header{padding:40px 0 40px}
+.k{display:flex;align-items:center;gap:16px;color:var(--muted);font-size:13px;letter-spacing:.24em;text-transform:uppercase}
+.k:before{content:"";width:48px;height:2px;background:var(--gold)}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:64px;line-height:1.05;margin:20px 0 16px}
+h1 em{color:var(--gold)}
+p.l{color:var(--muted);font-size:18px;max-width:720px}
+ul.f{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;margin:28px 0 0;max-width:820px}
+ul.f li{display:flex;gap:12px;color:#d6d2ca;font-size:16px}
+ul.f li:before{content:"";flex:none;width:14px;height:2px;background:var(--gold);margin-top:12px}
+figure{margin:36px 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#151517}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:14px 20px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.two{display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+.phone{max-width:300px;margin:36px auto}
+.phone img{border-radius:0}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px;margin-top:60px}
+@media (max-width:800px){h1{font-size:42px}.wrap{padding:0 18px}ul.f,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <a class="back" href="../">← Все работы</a>
+ <header>
+  <div class="k">Корпоративный сайт · RU / EN</div>
+  <h1>КузбассСтройМонтаж — <em>сайт строительной компании</em></h1>
+  <p class="l">Сайт подрядчика строительно-монтажных и горнопроходческих работ из Новокузнецка. Задача — показать заказчикам опыт, объекты и оборудование компании и дать быстрый способ связаться.</p>
+  <ul class="f">
+   <li>Две языковые версии с переключателем RU / EN</li>
+   <li>Блоки ключевых объектов с фотогалереями</li>
+   <li>Таблица выполненных работ с фильтром по направлениям</li>
+   <li>Каталог собственного оборудования</li>
+   <li>Отзывы и награды, сканы документов</li>
+   <li>Адаптивная вёрстка под телефон</li>
+  </ul>
+ </header>
+
+ <figure><img src="desktop.jpg" alt="Главный экран сайта КузбассСтройМонтаж" loading="lazy"><figcaption>Первый экран: оффер, контакты и кнопки действия</figcaption></figure>
+
+ <div class="two">
+  <figure><img src="full.jpg" alt="Сайт целиком: о компании, направления, объекты, перечень работ, оборудование" loading="lazy"><figcaption>Страница целиком: о компании, направления, объекты, перечень работ, оборудование</figcaption></figure>
+  <figure class="phone"><img src="mobile.jpg" alt="Мобильная версия сайта" loading="lazy"><figcaption>Мобильная версия</figcaption></figure>
+ </div>
+</div>
+<footer><div class="wrap">Портфолио · сайты и приложения под ключ</div></footer>
+</body>
+</html>
